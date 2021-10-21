@@ -21,7 +21,7 @@ public class Interval {
             if (number>=51 &&number<=100) {
                 System.out.print("Число в промежутке от 51 до 100");
             }
-            else if (number>100 || number<0 ){
+            else if (number>100 | number<0 ){
                 System.out.print("Число не входит ни в один диапазон");
             }
 
