@@ -5,35 +5,35 @@ import java.util.Scanner;
 
 public class Bingo {
     public static void main(String[] args) {
-        System.out.println("Угадайте задуманное число");
-        System.out.println("Для выхода из программы введите stop");
-
-        Random random=new Random();
-        int hiddenX = random.nextInt(101);
-        System.out.println("(случайное число: " + hiddenX+")");
-
+        Random random = new Random();
+        int X = random.nextInt(101);
+        System.out.println("Твоя задача угадать загаданное число. Для выхода из игры введи 00");
         Scanner in = new Scanner(System.in);
-
-        System.out.printf("Введите загаданное число" );
-
-        //int attempt = 0;           // Счетчик попыток.
-        int findX = in.nextInt();
-       while (findX!=hiddenX)
-
-            if (findX==hiddenX)
+        int attempt = 0;
+        int findX=0;
+        while(findX!=X) {
+            attempt++;
+            System.out.print("Введи загаданное число: ");
+            findX = in.nextInt();
+            if (findX == 00)
             {
-                System.out.println("Вы угадали!" + hiddenX);
+                System.out.println("Конец игры");
+                break;
             }
-            if (findX!=hiddenX)
-            {
-                if (findX<hiddenX)
-                    System.out.println("Вы не угадали, загаданное число больше вашего");
+            if (findX < X)
+                System.out.println("Ты не угадал, нужно больше");
+            else if (findX > X)
+                System.out.println("Ты не угадал, нужно меньше");
+            else {
+                System.out.println("Поздравляем! Ты угадал число c "+attempt+" попытки");
+                System.out.println("Конец игры.");
+            break;}
 
-                 if (findX>hiddenX)
-                     System.out.println("Вы не угадали, загаданное число меньше вашего");
-             }
-       // System.out.println("Конец игры!");
         }
-            }
+        }
+    }
+
+
+
 
 
