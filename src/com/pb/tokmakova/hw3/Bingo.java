@@ -7,15 +7,15 @@ public class Bingo {
     public static void main(String[] args) {
         Random random = new Random();
         int X = random.nextInt(101);
-        System.out.println("Твоя задача угадать загаданное число. Для выхода из игры введи 00");
+        System.out.println("Твоя задача угадать число от 0 до 100. Для выхода из игры введи число больше 100");
         Scanner in = new Scanner(System.in);
         int attempt = 0;
-        int findX=0;
-        while(findX!=X) {
+        while(true)
+        {
             attempt++;
             System.out.print("Введи загаданное число: ");
-            findX = in.nextInt();
-            if (findX == 00)
+            int findX = in.nextInt();
+            if (findX >100)
             {
                 System.out.println("Конец игры");
                 break;
