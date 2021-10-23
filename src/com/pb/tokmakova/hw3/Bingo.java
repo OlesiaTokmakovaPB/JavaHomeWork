@@ -25,7 +25,8 @@ public class Bingo {
             else if (findX > X)
                 System.out.println("Ты не угадал, нужно меньше");
             else {
-                System.out.println("Поздравляем! Ты угадал число c "+attempt+" попытки");
+                System.out.println("Поздравляем!");
+                System.out.println("Ты угадал число c "+attempt+" попытки");
                 System.out.println("Конец игры.");
             break;}
 
