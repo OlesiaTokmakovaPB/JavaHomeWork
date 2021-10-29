@@ -1,4 +1,4 @@
-package com.pb.tokmakova.test;
+package com.pb.tokmakova.hw4;
 
 import java.util.Scanner;
 
