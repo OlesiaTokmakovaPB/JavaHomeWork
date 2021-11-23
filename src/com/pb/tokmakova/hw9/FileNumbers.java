@@ -29,7 +29,7 @@ public class FileNumbers {
         }
         System.out.println("");
         System.out.println("Write to file \"" + path.toAbsolutePath() + "\" done!");
-        System.out.println("");
+
 
 
     }
